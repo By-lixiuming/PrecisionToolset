@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrecisionToolset", "PrecisionToolset.csproj", "{43248E2E-1F9B-4D71-ACF0-1A387D4A2664}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrecisionToolset", "PrecisionToolset\PrecisionToolset.csproj", "{66AFAC0B-3F21-46FB-96B9-684714BC8AEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{43248E2E-1F9B-4D71-ACF0-1A387D4A2664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43248E2E-1F9B-4D71-ACF0-1A387D4A2664}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43248E2E-1F9B-4D71-ACF0-1A387D4A2664}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43248E2E-1F9B-4D71-ACF0-1A387D4A2664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AFAC0B-3F21-46FB-96B9-684714BC8AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AFAC0B-3F21-46FB-96B9-684714BC8AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AFAC0B-3F21-46FB-96B9-684714BC8AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AFAC0B-3F21-46FB-96B9-684714BC8AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0150A522-76E7-4BEF-B79E-7C3EB5D393A0}
+		SolutionGuid = {4362A267-4680-48ED-8CA8-B93FCDB63717}
 	EndGlobalSection
 EndGlobal
