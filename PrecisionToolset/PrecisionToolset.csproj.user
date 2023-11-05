@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\CheckChineseControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SearchTextBoxControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\TestControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,6 +22,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\SidebarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CheckChineseControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SearchTextBoxControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TestControl.xaml">
