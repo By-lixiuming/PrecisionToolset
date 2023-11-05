@@ -1,6 +1,6 @@
-﻿using System;
+﻿using PrecisionToolset.ViewModels;
+using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +10,21 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PrecisionToolset.ViewModels;
-using PrecisionToolset.Views;
 
-namespace PrecisionToolset
+namespace PrecisionToolset.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// SearchTextBoxControl.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SearchTextBoxControl : UserControl
     {
-        public MainWindow()
+        public SearchTextBoxControl()
         {
             InitializeComponent();
-            DataContext = new WindowViewModel();
+            DataContext = new SearchTextBoxViewModel();
         }
     }
 }

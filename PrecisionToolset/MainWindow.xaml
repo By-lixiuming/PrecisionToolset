@@ -9,8 +9,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:test="clr-namespace:PrecisionToolset.Views"
     Title="MainWindow"
-    Width="800"
-    Height="450"
+    Width="1200"
+    Height="650"
     mc:Ignorable="d">
 
     <Window.Resources>
@@ -27,7 +27,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="AliceBlue">
+        <Grid Grid.Row="0" Background="#FF3B84CC">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50" />
                 <ColumnDefinition Width="*" />
@@ -64,27 +64,32 @@
                 x:Name="grid"
                 Grid.Column="0"
                 Width="150"
-                Background="AntiqueWhite"
                 RenderTransformOrigin="0.5,0.5">
-                <hc:SideMenu Width="150" BorderThickness="1">
-                    <hc:Interaction.Triggers>
-                        <hc:EventTrigger EventName="SelectionChanged">
-                            <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
-                        </hc:EventTrigger>
-                    </hc:Interaction.Triggers>
-                    <hc:SideMenuItem Header="Excel相关工具">
-                        <hc:SideMenuItem.Icon>
-                            <Image
-                                Width="24"
-                                Height="24"
-                                Source="Images/ExcelIcon.jpg" />
-                        </hc:SideMenuItem.Icon>
-                        <hc:SideMenuItem Header="中文检查" />
-                        <hc:SideMenuItem Header="日文检查" />
-                    </hc:SideMenuItem>
-                </hc:SideMenu>
+                <ListBox ItemsSource="{Binding Menus}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding MenuChangedCmd}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image
+                                    Width="16"
+                                    Height="16"
+                                    Source="{Binding Image}" />
+                                <TextBlock Margin="6,0,0,0" Text="{Binding Title}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </Grid>
-            <Grid Grid.Column="1" Background="Aquamarine" />
+            <Border
+                Grid.Column="1"
+                Padding="10"
+                Background="#f4f6f9">
+                <ContentControl Content="{Binding PageControl}" />
+            </Border>
         </Grid>
     </Grid>
 </Window>
