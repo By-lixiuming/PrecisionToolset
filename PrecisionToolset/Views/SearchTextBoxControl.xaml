@@ -14,7 +14,8 @@
         CornerRadius="10">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
                 <RowDefinition Height="30" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -39,20 +40,49 @@
                     Text="{Binding FilePath}" />
                 <Button
                     Grid.Column="2"
-                    Command="{Binding SelectFileCmd}"
+                    Command="{Binding SearchFileCmd}"
                     Content="选择文件" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    Background="#00FFFFFF"
+                    BorderThickness="0"
+                    Content="检索内容:" />
+                <TextBox
+                    Grid.Column="1"
+                    Height="30"
+                    Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
+                <Button
+                    Grid.Column="2"
+                    Command="{Binding SearchTextBoxCmd, UpdateSourceTrigger=PropertyChanged}"
+                    Content="查找文本"
+                    IsEnabled="{Binding SearchEnable}" />
 
             </Grid>
 
             <Label
-                Grid.Row="1"
+                Grid.Row="2"
                 HorizontalAlignment="Left"
                 Background="#00FFFFFF"
                 BorderThickness="0"
                 Content="输出内容：" />
 
 
-            <TextBox Grid.Row="2" />
+            <TextBox
+                Grid.Row="3"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                Text="{Binding ResultText, UpdateSourceTrigger=PropertyChanged}"
+                TextWrapping="Wrap" />
         </Grid>
     </Border>
 
